@@ -1,1 +1,1 @@
-# Lumi-s
+# Lumi
