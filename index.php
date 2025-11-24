@@ -1,1 +1,2 @@
-<?= ("TESTEEEEEEEEEE");
+<?php
+echo("Hello, World!");
