@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/lumi-icon.png">
+    <title>Lumi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --laranja: #b74a0c;
+            --laranja-claro: #d67d46;
+            --fundo: #faf3ed;
+        }
+
+        .top-bar {
+            background: var(--laranja);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .icon-entrega {
+            height: 20px;
+            width: 20px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: var(--fundo);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+        }
+
+        nav a {
+            margin: 0 18px;
+            color: #555;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--laranja);
+        }
+
+        .icons button {
+            border: 1px solid var(--laranja);
+            color: var(--laranja);
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: 8px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .hero {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 180px;
+            font-weight: 300px;
+        }
+
+
+
+        /* --------------------- */
+
+
+
+        .colecao {
+            background: var(--fundo);
+            padding: 60px 80px;
+        }
+
+        .colecao-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .colecao h2 {
+            font-size: 28px;
+            color: var(--laranja);
+            border-bottom: 3px solid var(--laranja);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .ver-mais {
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--laranja);
+            letter-spacing: 1px;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Caixa da imagem */
+        .img-box {
+            background: #ddd;
+            width: 100%;
+            height: 260px;
+        }
+
+        /* Títulos e textos dos produtos */
+        .produto h3 {
+            margin-top: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--laranja);
+        }
+
+        .produto p {
+            font-size: 13px;
+            color: #555;
+            margin: 5px 0 8px;
+        }
+
+        .preco {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Linha entre as seções */
+        .linha-divisoria {
+            border: none;
+            border-bottom: 3px solid var(--laranja);
+            width: 100%;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-entrega" viewBox="0 0 640 640">
+            <path fill="#fff"
+                d="M64 80c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16l3.3 0c10.4-36.9 44.4-64 84.7-64s74.2 27.1 84.7 64l102.6 0c4.9-17.4 15.1-32.7 28.7-43.9L368 96c0-8.8-7.2-16-16-16L64 80zm3.3 368L64 448c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l288 0c35.3 0 64 28.7 64 64l0 32 55.4 0c17 0 33.3 6.7 45.3 18.7l40.6 40.6c12 12 18.7 28.3 18.7 45.3L576 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64zM416 256l112 0 0-23.4c0-4.2-1.7-8.3-4.7-11.3l-40.6-40.6c-3-3-7.1-4.7-11.3-4.7l-55.4 0 0 80zm0 48l0 32.4c2.6-.2 5.3-.4 8-.4 40.3 0 74.2 27.1 84.7 64l3.3 0c8.8 0 16-7.2 16-16l0-80-112 0zM152 464a40 40 0 1 0 0-80 40 40 0 1 0 0 80zm272 0a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+        </svg>
+        Entregamos para todo o Brasil
+    </div>
+
+    <header>
+        <div>
+            <img src="img/lumi-brand.png" alt="Lumi" width="120">
+        </div>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+            <a href="#">Promoção</a>
+        </nav>
+
+        <div class="icons">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="#b74a0c"
+                        d="M241 87.1l15 20.7 15-20.7C296 52.5 336.2 32 378.9 32 452.4 32 512 91.6 512 165.1l0 2.6c0 112.2-139.9 242.5-212.9 298.2-12.4 9.4-27.6 14.1-43.1 14.1s-30.8-4.6-43.1-14.1C139.9 410.2 0 279.9 0 167.7l0-2.6C0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1z" />
+                </svg>
+            </button>
+
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path fill="#b74a0c"
+                        d="M24-16C10.7-16 0-5.3 0 8S10.7 32 24 32l45.3 0c3.9 0 7.2 2.8 7.9 6.6l52.1 286.3c6.2 34.2 36 59.1 70.8 59.1L456 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-255.9 0c-11.6 0-21.5-8.3-23.6-19.7l-5.1-28.3 303.6 0c30.8 0 57.2-21.9 62.9-52.2L568.9 69.9C572.6 50.2 557.5 32 537.4 32l-412.7 0-.4-2c-4.8-26.6-28-46-55.1-46L24-16zM208 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm224 0a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="img/lumi.png" alt="Lumi" width="600">
+    </section>
+
+
+    <!--------------------->
+
+    <section class="colecao">
+        <div class="colecao-topo">
+            <h2>Explore nossa coleção</h2>
+            <a href="#" class="ver-mais">+ VER MAIS</a>
+        </div>
+
+        <div class="grid-produtos">
+
+            <!-- PRODUTO 01 -->
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 01</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <!-- PRODUTO 02 -->
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 02</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <!-- PRODUTO 03 -->
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 03</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <!-- PRODUTO 04 -->
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 04</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+        </div>
+
+        <hr class="linha-divisoria">
+
+        <div class="grid-produtos">
+
+            <!-- PRODUTOS 5–8 -->
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 05</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 06</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 07</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+
+            <div class="produto">
+                <div class="img-box"></div>
+                <h3>Modelo 08</h3>
+                <p>Descrição...</p>
+                <span class="preco">R$ 100</span>
+            </div>
+        </div>
+
+        <hr class="linha-divisoria">
+
+    </section>
+</body>
+
+</html>
