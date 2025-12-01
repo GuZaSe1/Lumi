@@ -1,4 +1,6 @@
 <?php
+ini_set('max_file_uploads', '100'); // permite até 100 uploads simultâneos
+
 session_start();
 require 'templates/header.php';
 ?>
@@ -43,7 +45,6 @@ require 'templates/header.php';
 
 </html>
 
-
 <script>
     function abrirDialogInclusaoItem() {
         $('#dlg-item').dialog('open').dialog('setTitle', 'Incluir Novo Item');
@@ -60,27 +61,41 @@ require 'templates/header.php';
     }
 
     function salvarItem() {
-        var form = $('#fm-item')
-        if (!form.form('validate')) return
+        var form = $('#fm-item');
+
+        if (!form.form('validate')) return;
+
+        // Criar FormData para enviar arquivos
+        var formData = new FormData(form[0]);
+
         $.ajax({
             url: 'controlar_item.php',
             type: 'post',
-            data: form.serialize(),
+            data: formData,
             dataType: 'json',
+
+            // Necessário para upload funcionar
+            processData: false,
+            contentType: false,
+
             success: function(result) {
                 if (result.success) {
-                    $('#dlg-item').dialog('close')
-                    $('#dg_itens').datagrid('reload')
+                    $('#dlg-item').dialog('close');
+                    $('#dg_itens').datagrid('reload');
+
                     $.messager.show({
                         title: 'Sucesso',
                         msg: 'Item salvo com sucesso.'
-                    })
-                } else $.messager.alert('Erro', result.message, 'error')
+                    });
+                } else {
+                    $.messager.alert('Erro', result.message, 'error');
+                }
             },
+
             error: function() {
-                $.messager.alert('Erro Crítico', 'Não foi possível contatar o servidor.', 'error')
+                $.messager.alert('Erro Crítico', 'Não foi possível contatar o servidor.', 'error');
             }
-        })
+        });
     }
 
     function excluirItem(cod_item) {
