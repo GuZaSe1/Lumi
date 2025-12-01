@@ -1,9 +1,13 @@
 <?php
-session_start();
 require 'templates/header.php';
+require 'templates/navbar.php';
+
+session_start();
+navbar('home');
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

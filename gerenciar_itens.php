@@ -1,10 +1,9 @@
 <?php
-ini_set('max_file_uploads', '100'); // permite até 100 uploads simultâneos
-
-session_start();
 require 'templates/header.php';
 require 'templates/navbar.php';
 
+ini_set('max_file_uploads', '100'); // permite até 100 uploads simultâneos
+session_start();
 navbar('home');
 ?>
 <!DOCTYPE html>
