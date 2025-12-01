@@ -11,6 +11,10 @@
     --fundo: #faf3ed;
 }
 
+.adm-body {
+    background: #d67d4639;
+}
+
 .top-bar {
     color: white;
     background: var(--laranja);
@@ -58,6 +62,14 @@ nav {
 .menu-item {
     display: inline-block;
     position: relative;
+}
+
+.lumi-adm {
+    color: #444;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-left: 18px;
 }
 
 .submenu {
@@ -163,7 +175,7 @@ nav {
     position: relative;
     overflow: hidden; 
     width: 100%;
-    height: 600px;    
+    height: 450px;    
     border-radius: 8px;
 }
 
@@ -285,7 +297,7 @@ nav {
 }
 
 .btn-colecao {
-    background: #fdf8f3;
+    background: var(--fundo);
     color: var(--laranja);
     display: flex;
     align-items: center;

@@ -1,122 +1,26 @@
 <?php
-// criar "hamburger menu" 
-// deixar mais bonito
-//add a logo
-// fazer a logo voltar para o index.php
-// melhorar desempenho
-// add icone contato
-// add icone carrinho
-// fazer animacao
-function navbar($paginaAtiva = '')
-{
-    echo '
-    <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        .navbar {
-          background-color: #262f47;
-          color: white;
-          width: 100%;
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .navbar-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0.8rem 1.5rem;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .logo a {
-          color: #ff8001;
-          font-size: 1.5rem;
-          font-weight: bold;
-          text-decoration: none;
-          letter-spacing: 1px;
-        }
-
-        .nav-links {
-          list-style: none;
-          display: flex;
-          gap: 1.5rem;
-        }
-
-        .nav-links a {
-          color: white;
-          text-decoration: none;
-          font-size: 1rem;
-          transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-          color: #ff8001;
-        }
-
-        .nav-links .ativo {
-          color: #ff8001;
-          border-bottom: 2px solid #ff8001;
-        }
-
-        .menu-toggle {
-          display: none;
-          flex-direction: column;
-          cursor: pointer;
-        }
-
-        .menu-toggle span {
-          height: 3px;
-          width: 25px;
-          background: white;
-          margin: 4px 0;
-          border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-          .nav-links {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background: #d37212ff;
-            text-align: center;
-          }
-
-          .nav-links.active {
-            display: flex;
-          }
-
-          .menu-toggle {
-            display: flex;
-          }
-        }
-    </style>
-
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <a href="index.html">LUMI</a>
-            </div>
-
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span><span></span><span></span>
-            </div>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="roupas.php" ' . ($paginaAtiva == "roupas" ? 'class="ativo"' : '') . '>Roupas</a></li>
-                <li><a href="acessorios.php" ' . ($paginaAtiva == "acessorios" ? 'class="ativo"' : '') . '>Acessórios</a></li>
-                <li><a href="naosei.php" ' . ($paginaAtiva == "naosei" ? 'class="ativo"' : '') . '>Lançamentos</a></li>
-                <li><a href="contato.php" ' . ($paginaAtiva == "contato" ? 'class="ativo"' : '') . '>Contato</a></li>
-            </ul>
+function navbar() {
+  echo '
+    <link rel="stylesheet" href="style.css">
+    <body class="adm-body">
+      <header>
+        <div>
+            <img src="img/lumi-brand.png" alt="Lumi" width="120">
         </div>
-    </nav>
+        
+        <p class="lumi-adm">Lumi Administrativo</p>
+        
+        <div class="icons">
+            <a href="index.html">
+                <button class="button-icons">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path fill="#b74a0c" d="M224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160zM566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L438.6 169.3C426.1 156.8 405.8 156.8 393.3 169.3C380.8 181.8 380.8 202.1 393.3 214.6L466.7 288L256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L466.7 352L393.3 425.4C380.8 437.9 380.8 458.2 393.3 470.7C405.8 483.2 426.1 483.2 438.6 470.7L566.6 342.7z"/>
+                  </svg>
+                </button>
+            </a>
+        </div>
+      </header>
+    </body>
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
