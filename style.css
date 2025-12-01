@@ -158,19 +158,12 @@ nav {
     text-decoration: underline;
 }
 
-.grid-produtos {
-    grid-template-columns: repeat(4, 1fr);
-    display: grid;
-    gap: 40px 30px;
-    margin: 40px 0 80px;
-}
-
 .img-box {
     background: #ddd;
     position: relative;
     overflow: hidden; 
     width: 100%;
-    height: 400px;    
+    height: 600px;    
     border-radius: 8px;
 }
 
@@ -505,13 +498,24 @@ nav {
     margin: 40px 0 40px 0;
 }
 
+/* ------------------------- */
+
+.grid-produtos {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 40px 30px;
+    margin: 40px 0 80px;
+}
+
 .card-produto {
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     background: #fff;
-    border-radius: 10px;
-    transition: .25s ease;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    transition: .25s ease;
+    border-radius: 10px;
+    flex-direction: column; 
 }
 
 .card-produto:hover {
@@ -520,32 +524,40 @@ nav {
 }
 
 .card-img {
-    background-color: #e6e6e6;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 400px;
+    height: 380px;             
+}
+
+.img-produto {
+    object-fit: cover;         
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .card-info {
-    padding: 15px 18px;
+    background: #fff;          
+    display: flex;
+    flex-direction: column;
+    padding: 14px 18px;
+    gap: 6px;
 }
 
 .card-info h3 {
     color: #333;
     font-size: 17px;
     font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.card-info p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 6px;
+    margin: 0;
 }
 
 .card-preco {
     color: var(--laranja);
     font-weight: bold;
     font-size: 18px;
+    margin-top: 4px;
 }

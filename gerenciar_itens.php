@@ -3,9 +3,12 @@ ini_set('max_file_uploads', '100'); // permite até 100 uploads simultâneos
 
 session_start();
 require 'templates/header.php';
+require 'templates/navbar.php';
+
+navbar('home');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

@@ -7,22 +7,6 @@
     <link rel="icon" href="img/lumi-icon.png">
     <link rel="stylesheet" href="style.css">
     <title>Lumi</title>
-
-    <style>
-        .card-img {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            border-radius: 8px;
-            background: #ddd;
-        }
-
-        .img-produto {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
 </head>
 
 <body style="background-color: #faf3ed;">
@@ -70,13 +54,6 @@
                     </svg>
                 </button>
             </a>
-
-            <button class="button-icons">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path fill="#b74a0c"
-                        d="M24-16C10.7-16 0-5.3 0 8S10.7 32 24 32l45.3 0c3.9 0 7.2 2.8 7.9 6.6l52.1 286.3c6.2 34.2 36 59.1 70.8 59.1L456 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-255.9 0c-11.6 0-21.5-8.3-23.6-19.7l-5.1-28.3 303.6 0c30.8 0 57.2-21.9 62.9-52.2L568.9 69.9C572.6 50.2 557.5 32 537.4 32l-412.7 0-.4-2c-4.8-26.6-28-46-55.1-46L24-16zM208 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm224 0a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
-                </svg>
-            </button>
         </div>
     </header>
 
@@ -90,196 +67,27 @@
             <a href="#promocoes" class="prod-link">Promoções</a>
         </section>
 
-        <!-- fazer um for ligado ao incluir_itens para ir criando automatico os cards de produtos -->
-
         <section class="produtos-conteudo">
             <!-- ROUPAS -->
-            <h2 class="produtos-titulo" id="roupas">Roupas</h2>
-            <div class="grid-produtos">
-                <!-- <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod1.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Vestido Floral</h3>
-                        <p>Leve e confortável</p>
-                        <span class="card-preco">R$ 139,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod2.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Camisa Oversized</h3>
-                        <p>Clássica e estilosa</p>
-                        <span class="card-preco">R$ 89,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod3.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Pantalona Premium</h3>
-                        <p>Caimento perfeito</p>
-                        <span class="card-preco">R$ 159,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod4.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Blusa Cropped</h3>
-                        <p>Ideal para o verão</p>
-                        <span class="card-preco">R$ 79,90</span>
-                    </div>
-                </div> -->
-
-                <h2 class="produtos-titulo" id="roupas"></h2>
-                <div class="grid-produtos" id="grid-roupas"></div>
-                <!-- <hr class="linha-divisoria"> -->
-
-            </div>
+            <h2 class="produtos-titulo">Roupas</h2>
+            <div class="grid-produtos" id="grid-roupas"></div>
+            <hr class="linha-divisoria">
 
             <!-- ÓCULOS -->
-            <h2 class="produtos-titulo" id="oculos">Óculos</h2>
-            <div class="grid-produtos">
-                <!-- <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod1.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Vestido Floral</h3>
-                        <p>Leve e confortável</p>
-                        <span class="card-preco">R$ 139,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod2.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Camisa Oversized</h3>
-                        <p>Clássica e estilosa</p>
-                        <span class="card-preco">R$ 89,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod3.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Pantalona Premium</h3>
-                        <p>Caimento perfeito</p>
-                        <span class="card-preco">R$ 159,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod4.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Blusa Cropped</h3>
-                        <p>Ideal para o verão</p>
-                        <span class="card-preco">R$ 79,90</span>
-                    </div>
-                </div> -->
-
-                <h2 class="produtos-titulo" id="oculos"></h2>
-                <div class="grid-produtos" id="grid-oculos"></div>
-                <hr class="linha-divisoria">
-
-            </div>
+            <h2 class="produtos-titulo">Óculos</h2>
+            <div class="grid-produtos" id="grid-oculos"></div>
             <hr class="linha-divisoria">
 
             <!-- NOVIDADES -->
-            <h2 class="produtos-titulo" id="novidades">Novidades</h2>
-            <div class="grid-produtos">
-                <!-- <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod1.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Vestido Floral</h3>
-                        <p>Leve e confortável</p>
-                        <span class="card-preco">R$ 139,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod2.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Camisa Oversized</h3>
-                        <p>Clássica e estilosa</p>
-                        <span class="card-preco">R$ 89,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod3.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Pantalona Premium</h3>
-                        <p>Caimento perfeito</p>
-                        <span class="card-preco">R$ 159,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod4.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Blusa Cropped</h3>
-                        <p>Ideal para o verão</p>
-                        <span class="card-preco">R$ 79,90</span>
-                    </div>
-                </div> -->
-
-                <h2 class="produtos-titulo" id="novidades"></h2>
-                <div class="grid-produtos" id="grid-novidades"></div>
-                <hr class="linha-divisoria">
-
-
-            </div>
+            <h2 class="produtos-titulo">Novidades</h2>
+            <div class="grid-produtos" id="grid-novidades"></div>
             <hr class="linha-divisoria">
 
-
             <!-- PROMOÇÕES -->
-            <h2 class="produtos-titulo" id="promocoes">Promoções</h2>
-            <!-- <div class="grid-produtos">
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod1.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Vestido Floral</h3>
-                        <p>Leve e confortável</p>
-                        <span class="card-preco">R$ 139,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod2.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Camisa Oversized</h3>
-                        <p>Clássica e estilosa</p>
-                        <span class="card-preco">R$ 89,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod3.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Pantalona Premium</h3>
-                        <p>Caimento perfeito</p>
-                        <span class="card-preco">R$ 159,90</span>
-                    </div>
-                </div>
-
-                <div class="card-produto">
-                    <div class="card-img" style="background-image: url('img/prod4.jpg');"></div>
-                    <div class="card-info">
-                        <h3>Blusa Cropped</h3>
-                        <p>Ideal para o verão</p>
-                        <span class="card-preco">R$ 79,90</span>
-                    </div>
-                </div> -->
-
-                <h2 class="produtos-titulo" id="promocoes"></h2>
-                <div class="grid-produtos" id="grid-promocoes"></div>
-                <hr class="linha-divisoria">
-
-
-            </div>
+            <h2 class="produtos-titulo">Promoções</h2>
+            <div class="grid-produtos" id="grid-promocoes"></div>
         </section>
     </section>
-
     <hr class="linha-divisoria">
     <footer>
         <div class="footer-top">
@@ -311,8 +119,8 @@
                 <ul>
                     <li><a href="#">Central de Ajuda</a></li>
                     <li><a href="#">Status do Pedido</a></li>
-                    <li><a href="#">Entregas</a></li>
                     <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="gerenciar_pedidos.php">Lumi Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -358,15 +166,15 @@
 
             dados.forEach(item => {
                 const card = `
-        <div class="card-produto">
-            <div class="card-img">
-                <img src="${item.imagem_item}" class="img-produto">
-            </div>
-            <div class="card-info">
-                <h3>${item.den_item}</h3>
-                <span class="card-preco">R$ ${item.preco_item}</span>
-            </div>
-        </div>
+                <div class="card-produto">
+                    <div class="card-img">
+                        <img src="${item.imagem_item}" class="img-produto">
+                    </div>
+                    <div class="card-info">
+                        <h3>${item.den_item}</h3>
+                        <span class="card-preco">R$ ${item.preco_item}</span>
+                    </div>
+                </div>
             `;
                 container.innerHTML += card;
             });

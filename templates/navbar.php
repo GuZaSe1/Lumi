@@ -85,7 +85,7 @@ function navbar($paginaAtiva = '')
             display: none;
             flex-direction: column;
             width: 100%;
-            background: #262f47;
+            background: #d37212ff;
             text-align: center;
           }
 
@@ -102,7 +102,7 @@ function navbar($paginaAtiva = '')
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <a href="index.php">LUMI</a>
+                <a href="index.html">LUMI</a>
             </div>
 
             <div class="menu-toggle" id="menu-toggle">

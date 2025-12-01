@@ -93,13 +93,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
     }
 
-
     // Retorna resultado para AJAX
     header('Content-Type: application/json');
     echo json_encode($response);
     exit;
 }
-
 
 $is_form_only = isset($_GET['form_only']);
 $cod_item = $_GET['cod_item'] ?? null;
@@ -157,10 +155,8 @@ if (!$is_form_only) {
     </div>
 
     <div style="margin-bottom:20px;">
-        <select class="easyui-combobox" name="cod_categoria" style="width:100%"
-            data-options="label:'Categoria:',labelWidth:140,required:true">
+        <select class="easyui-combobox" name="cod_categoria" style="width:100%" data-options="label:'Categoria:',labelWidth:140,required:true">
             <option value="">Selecione...</option>
-
             <?php foreach ($categorias as $c): ?>
                 <option value="<?= $c['cod_categoria'] ?>"
                     <?= $cod_categoria == $c['cod_categoria'] ? 'selected' : '' ?>>
