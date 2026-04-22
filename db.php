@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'exploramais';
+$db   = 'LumiPRD';
 $user = 'root';
 $pass = '1234';
 $charset = 'utf8mb4';
